@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day #</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <link rel="stylesheet" href="css/anotherstyle.css">
+    <style>
+        .studentRec {
+            border: 1px solid #777;
+            margin: 4px;
+            padding: 4px;
+            font-size: 14px;
+            background: #cccccc;
+        }
+        .passingStudent {
+            background: lightgreen;
+        }
+        .failingStudent {
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container"></div>
+
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<script src="js/lib/underscore.js"></script>
+<script src="SampleData.js"></script>
+<script>
+
+
+function printOutInformation(elem, indx, list) {
+    var container = document.getElementById("container");
+    var information = "<p>" + elem + "</p>";
+    container.innerHTML += information;
+}
+
+window.addEventListener("load", function(e) {
+
+});
+</script>
+</body>
+</html>
