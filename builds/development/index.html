@@ -31,14 +31,22 @@
 <script>
 
 
-function printOutInformation(elem, indx, list) {
+function appendTemplateData(dataString) {
     var container = document.getElementById("container");
-    var information = "<p>" + elem + "</p>";
-    container.innerHTML += information;
+    container.innerHTML += dataString;
 }
 
-window.addEventListener("load", function(e) {
+var templateString = "<div><span>Hello, every body, my name is <% print(firstname.toUpperCase()) %>, I am a developer working in enterprise system in University of Florida. And I have been here for <%= year.length %> years</span></div>";
 
+window.addEventListener("load", function(e) {
+    var compiledTemplate = _.template(templateString);
+
+    var result = compiledTemplate({
+        firstname: "hongbo",
+        year: "xxx"
+    });
+
+    appendTemplateData(result);
 });
 </script>
 </body>
